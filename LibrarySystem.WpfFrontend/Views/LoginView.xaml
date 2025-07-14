@@ -1,0 +1,47 @@
+﻿<Window x:Class="LibrarySystem.WpfFrontend.Views.LoginView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LibrarySystem.WpfFrontend.Views"
+        mc:Ignorable="d"
+        Height="550" Width="700"
+        WindowStyle="None"
+        Background="Transparent">
+
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Border Background="#F4F0ED" BorderBrush="#3B3B3B"  BorderThickness="1" CornerRadius="10">
+            <Grid Height="550" Width="700" VerticalAlignment="Top">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="300"/>
+                    <ColumnDefinition Width="400"/>
+                </Grid.ColumnDefinitions>
+                <Border Grid.Column="0" CornerRadius="10,0,0,10">
+                    <Border.Background>
+                        <ImageBrush ImageSource="./Images/LoginPage.jpg" Stretch="UniformToFill" />
+                    </Border.Background>
+                </Border>
+                <Grid Grid.Column="1" Margin="20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock x:Name="LabelLoginPage" Text="Login" FontFamily="Calibri" FontSize="28" Foreground="#3B3B3B" 
+                                Margin="60,38,0,0" TextWrapping="Wrap"  HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1"/>
+                    <TextBlock x:Name="LoginDescription" Text="To get started, enter your login details below:"  FontFamily="Calibri" FontSize="12" Foreground="SlateGray" 
+                                Margin="0,77,0,0" TextWrapping="Wrap"  HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Row="1" Width="240"/>
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1">
+                        <TextBlock x:Name="LabelUsername" Text="Username" FontFamily="Calibri" FontSize="10" Foreground="#B7410E" Width="240" />
+                        <TextBox x:Name="TextBoxUsername" Text="{Binding Username}" Style="{StaticResource RoundedTextBox}" Margin="0,5" Width="240" Height="36" AutomationProperties.HelpText="" Foreground="#FF3B3B3B" />
+
+                        <TextBlock x:Name="LabelPassword" Text="Password" FontFamily="Calibri" FontSize="10" Foreground="#B7410E" Width="240"/>
+                        <PasswordBox x:Name="PasswordBoxUserName" Style="{StaticResource RoundedPasswordBox}" Margin="0,5" Width="240" Height="36" Foreground="#FF3B3B3B"/>
+
+                        <Button x:Name="BtnLogin" Content="Login" Command="{Binding LoginCommand}" Click="Login_Click" Style="{StaticResource RoundedButtonAccentColor}" FontSize="16"
+                                Background="#B7410E" Foreground="white" Width="240" Height="36" Margin="0,20"/>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
