@@ -13,6 +13,9 @@ V2 is a full-stack upgrade, built with:
 Current Progress:
 - ✅ Basic API integration working
 - ✅ Seeded data (2 users) successfully retrieved and displayed in the frontend on button click
-- ✅ Reusable styling implemented with resource rictionaries in WPF 
+- ✅ Reusable styling implemented with resource dictionaries in WPF 
 
 🛠️ More features and improvements coming soon!
+
+## Author
+Jane Holborn
